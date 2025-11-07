@@ -1,0 +1,59 @@
+.container {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #01040f, #051933);
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  border-radius: 1rem;
+  color: #dceeff;
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      0deg,
+      rgba(0, 191, 255, 0.1) 0,
+      transparent 2px,
+      transparent 40px
+    );
+    pointer-events: none;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  color: #00bfff;
+  text-shadow: 0 0 20px #00bfff;
+}
+
+.textarea {
+  background: rgba(0, 191, 255, 0.05);
+  border: 1px solid rgba(0, 191, 255, 0.4);
+  color: #dceeff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 12px #00bfff;
+  }
+}
+
+.button {
+  background: linear-gradient(90deg, #00bfff, #007bff);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.3rem;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px #00bfff;
+  }
+}
